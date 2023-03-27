@@ -1,8 +1,8 @@
 :root {
-    --fuenteHeading: 'PT Sans', sans-serif;
-    --fuenteParrafo: 'Open Sans', sans-serif;
+    --fuenteHeading: 'Rubik', sans-serif;
+    --fuenteParrafo: 'Rubik', sans-serif;
     
-    --primario: #784d3c;
+    --primario: #F5F5F5;
     --gris: #e1e1e1;
     --blanco: #ffff;
     --negro: #000;
@@ -45,7 +45,7 @@ h4 {
     font-size: 2.8rem;
 }
 img {
-    max-width: 100%;
+    max-width: 100%;    
 }
 
 /** Utilidades **/
@@ -57,4 +57,98 @@ img {
 }
 .centrar-texto {
     text-align: center;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.logo-header {    
+    padding: 0 8rem;
+    font-weight: 500;    
+}
+.nav {    
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding-right: 8rem;    
+}
+.nav__items {
+    color: var(--negro);
+}
+
+
+/** Efecto Lluvia**/
+#container {
+    position: relative;
+    height: 10vh;    
+}
+  
+.logo {
+    position: absolute;
+    top: -35rem;
+    animation: fall linear 3s infinite;
+}
+  
+@keyframes fall {
+    0% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+}
+.logo:nth-child(1) {
+    left: 1%;
+}
+.logo:nth-child(2) {
+    left: 25%;
+    animation-delay: 0.5s;
+} 
+.logo:nth-child(3) {
+    right: 25%;
+    animation-delay: 1s;
+}
+.logo:nth-child(4) {
+    right: 1%;
+    animation-delay: 1s;
+}
+
+
+/** Sobre Mi **/
+.sobre-mi {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+.sobre-mi__perfil {
+    height: 20rem;
+    width: 20rem;
+    background-color: black;
+    border-radius: 10rem;
+    margin-bottom: 2rem;
+}
+.sobre-mi__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sobre-mi__redes {
+    display: flex;
+    gap: 5rem;    
+}
+.botom-redes {
+    background-color: cyan;
+    padding: 0.5rem;
+    border-radius: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.botom-redes:hover {
+    background-color: aliceblue;
 }
