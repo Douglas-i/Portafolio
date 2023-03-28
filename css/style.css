@@ -9,7 +9,7 @@
 }
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%;    
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -18,6 +18,8 @@ body {
     font-family: var(--fuenteParrafo);
     font-size: 1.6rem;
     line-height: 2;
+    background-color: #000;
+    color: var(--primario);
 }
 
 /** Globales **/
@@ -75,9 +77,12 @@ img {
     padding-right: 8rem;    
 }
 .nav__items {
-    color: var(--negro);
+    color: var(--primario);
 }
-
+.nav__items:hover {
+    color: blue;
+    transform: scale(1.1);
+}
 
 /** Efecto Lluvia**/
 #container {
@@ -117,7 +122,6 @@ img {
     animation-delay: 1s;
 }
 
-
 /** Sobre Mi **/
 .sobre-mi {    
     display: flex;
@@ -128,8 +132,8 @@ img {
 .sobre-mi__perfil {
     height: 20rem;
     width: 20rem;
-    background-color: black;
     border-radius: 10rem;
+    border: solid white;
     margin-bottom: 2rem;
 }
 .sobre-mi__info {
@@ -139,10 +143,12 @@ img {
 }
 .sobre-mi__redes {
     display: flex;
-    gap: 5rem;    
-}
+    gap: 5rem;   
+    margin-top: 2rem; 
+}   
 .botom-redes {
-    background-color: cyan;
+    background-color: blue;
+    color: white;
     padding: 0.5rem;
     border-radius: 10rem;
     width: 10rem;
@@ -150,5 +156,18 @@ img {
     justify-content: center;
 }
 .botom-redes:hover {
-    background-color: aliceblue;
+    background-color: aliceblue;        
+    color: #000;
+}
+.github:hover {
+    color: transparent;
+    background-image: url(../img/github.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.linkedIn:hover {
+    color: transparent;
+    background-image: url(../img/linkedin.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
